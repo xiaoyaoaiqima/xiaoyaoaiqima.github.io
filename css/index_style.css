@@ -1,0 +1,12 @@
+body{
+    margin-top: 15px;
+    margin-left: 30px;
+}
+a {
+    color: #58b5a1; /* 设置链接的文本颜色 */
+    text-decoration: none; /* 去掉默认的下划线 */
+    font-weight: bold; /* 设置链接的字体粗细 */
+    background-color: #f2f2f2; /* 设置链接的背景色 */
+    padding: 5px 10px; /* 设置链接的内边距 */
+    border-radius: 5px; /* 设置链接的圆角半径 */
+  }
