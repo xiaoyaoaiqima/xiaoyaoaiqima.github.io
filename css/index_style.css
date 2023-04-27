@@ -9,7 +9,8 @@ body {
 }
 
 a {
-    color: #58b5a1;
+    --color: #58b5a1;
+    color: var(--color);
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
@@ -17,6 +18,11 @@ a {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+a:hover {
+    color: #201c1c;
+}
+
 
 .container {
     display: flex;
@@ -69,7 +75,7 @@ a {
     background-position: center;
     display: block;
     margin: 0 auto;
-
+    z-index: 99;
 }
 
 h1 {
@@ -88,4 +94,44 @@ li {
     font-size: 24px;
     color: #805252;
     margin-bottom: 8px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    /* 设置背景颜色 */
+    border-left: 10px solid #ccc;
+    /* 左侧边框 */
+    margin: 1.5em 10px;
+    /* 上下外边距和左右内边距 */
+    padding: 0.5em 10px;
+    /* 上下内边距和左右内边距 */
+}
+
+blockquote p {
+    font-style: italic;
+    /* 引用文字斜体 */
+    font-size: 1.2em;
+    /* 引用文字大小 */
+    line-height: 1.5;
+    /* 引用文字行高 */
+}
+
+.element {
+    background: rgba(255, 255, 255, 0.5);
+    /* 半透明背景 */
+    border: 1px solid #ccc;
+    /* 浅灰色边框 */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    /* 微弱光晕效果，提升立体感 */
+    /* filter: blur(4px); */
+    /* 模糊效果，实现毛玻璃效果 */
+    transition: transform 0.2s ease-in-out;
+    /* 动画效果，实现律动感效果 */
+    z-index: 1;
+}
+
+.element:hover {
+    transform: scale(1.05);
+    /* 放大元素，实现律动感效果 */
+    filter: blur(4px);
 }
