@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>range系列</title>
+    <link rel="stylesheet" href="../../css/ai教我c++/style.css">
+    <link rel="stylesheet" href="../../css/text.css">
+</head>
+
+<body>
+    <button class="btn" onclick="location.href = './ai教我c++.html';"><span class="t18"> 返回</span></button>
+    <h2> range简介</h2>
+    <ul>
+        <li>
+            <p>
+                range是c++20新引入的库之一，虽然外部有更强的range-v3，我们只能等c++23了
+            </p>
+            <p>
+                引申一点，c++的管道运算符 “|”，可以将左值以参数形式传给右边
+            </p>
+        </li>
+        <li>
+            <p>
+                range就像一个容器<br>
+                最重要的概念是view，即能看到range的范围,从而进行操作<br>
+                举例：
+            <ul>
+                <li>
+                    ranges::views::reverse(翻转)
+                </li>
+                <li>
+                    ranges::views::transform(变化)
+                </li>
+                <li>
+                    ranges::views::filter(过滤)
+                </li>
+            </ul>
+            </p>
+        </li>
+        <li>
+            <p>
+                | 的作用是让式子更易懂，不用在看连续的函数中的括号套括号，去抽丝剥茧
+            </p>
+            <p>
+                auto&& __range = a | ranges::views::reverse;<br>
+                auto&& range1 = a | ranges::views::transform([](int x) { return x + 1; });<br>
+                auto&& range2 = range1 | ranges::views::filter([](int x) { return x % 2; });
+            </p>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <h2> range+</h2>
+    <ul>
+        <li>
+            <p> range+可变参数</p>
+            <img src="../../asserts/pic/ai教我c++/可变参数.png" alt="">
+            <ul>
+                <li>
+                    <p>std::forward:参数以原始的类型和引用类型转发给下一个函数，同时避免多余的拷贝或移动操作。</p>
+                      <p>forward + template + && </p> 
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

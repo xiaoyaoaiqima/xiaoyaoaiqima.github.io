@@ -3,42 +3,14 @@ body {
 }
 
 
-
-
 .border {
-    border: none;
-    box-shadow: 0px 0px 10px rgba(181, 240, 164, 0.3), 0px 0px 20px rgba(156, 120, 120, 0.2), 0px 0px 30px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     background: linear-gradient(145deg, #d1b8b8, #4d4d4d);
     border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.border::before,
-.border::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3), 0px 0px 20px rgba(255, 255, 255, 0.2), 0px 0px 30px rgba(255, 255, 255, 0.1);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    animation: pulse-ring 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-}
-
-.border::before {
-    width: 2px;
-    height: 2px;
-}
-
-.border::after {
-    width: 3px;
-    height: 3px;
+    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 .box {
-    animation: pulse-ring;
+    animation: pulse-ring 2s ease-in-out;
 }
 
 @keyframes pulse-ring {
@@ -48,26 +20,56 @@ body {
     }
 
     100% {
-        transform: translate(-50%, -50%) scale(3);
+        transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
     }
 }
 
-a {
-    --color: #58b5a1;
-    color: var(--color);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-    background-color: #f2f2f2;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
 
-a:hover {
-    color: #201c1c;
-}
 
-li{
+li {
     margin-top: 15px;
+}
+
+
+.btn {
+    --color: #00A97F;
+    --color2: #212121;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1.5px solid var(--color);
+    transition: .5s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--color);
+}
+
+.btn::before {
+    content: '';
+    display: block;
+    height: 110%;
+    width: 310%;
+    transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    z-index: -1;
+    transition: .7s;
+    background: linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+}
+
+.btn:hover::before {
+    left: -200%;
+}
+
+.btn:hover {
+    color: var(--color2);
+}
+
+.btn:active {
+    transform: scale(.8);
+    filter: brightness(.8);
 }

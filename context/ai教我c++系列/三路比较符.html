@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/ai教我c++/style.css">
+    <link rel="stylesheet" href="../../css/text.css">
     <title>三路比较符</title>
 </head>
 
 <body>
+    <button  class="btn" onclick="location.href = './ai教我c++.html';"><span class="t18"> 返回</span></button>
     <ul>
         <li>
-            <img src="../../asserts/pic/ai教我c++/1.png" alt="picNum_1">
+            <p>背景：在看三路比较符的时候，遇到了一个weak_ordering的概念</p>
+        </li>
+        <li>
+            <img width="50%" height="50%" src="../../asserts/pic/ai教我c++/1.png" alt="picNum_1">
         </li>
         <li>
             <p>gpt提出了一个std::strong_ordering，跟std::weak_ordering的不同是，后者允许格外值</p>
-            <p>此时的我并不知道附加值是什么，于是我铁头娃，接着问</p>
+            <p>彼时的我不明所以，于是铁头娃，接着问</p>
         </li>
         <li>
-            <img src="../../asserts/pic/ai教我c++/2.png" alt="picNum_2">
+            <img width="50%" height="50%" src="../../asserts/pic/ai教我c++/2.png" alt="picNum_2">
         </li>
         <li>
-            <p>gpt虽然没有讲清楚，但是此时我好像懂了，附加值的意思是，weak版可以不止返回一种大小比较，是一种纠缠态 &#x1F923;</p>
-            <p>即，weak版使用后，并没有决定返回什么，可以返回大于，也可以返回小于和等于</p>
+            <p>gpt虽然没有讲清楚，但是此时我好像懂了，附加值的意思是，weak版允许等价但不相等，有点抽象 &#x1F923;</p>
+            <p>即，weak版可以返回不严格等于</p>
+            <p>此时我也觉得gpt可能再往下说，也是重复举一些例子了，还是没有恰当的例子</p>
+            <p>于是上知乎找例子</p>
+        </li>
+        <li>
+            <p>最终发现一个例子，大小写忽略字符串的比较</p>
+            <p>over</p>
         </li>
     </ul>
 </body>
