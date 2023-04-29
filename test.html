@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* 分界线样式 */
+      .divider {
+        position: relative;
+        height: 0px;
+        border-top: 1px solid #ccc;
+        margin: 10px 0;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+      .divider::before {
+        left: -10px;
+      }
+      .divider::after {
+        right: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="divider"></div>
+    <p>这是上面的内容。</p>
+    <div class="divider"></div>
+    <p>这是下面的内容。</p>
+  </body>
+</html>

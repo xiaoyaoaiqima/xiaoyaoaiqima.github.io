@@ -62,7 +62,16 @@
             <ul>
                 <li>
                     <p>std::forward:参数以原始的类型和引用类型转发给下一个函数，同时避免多余的拷贝或移动操作。</p>
-                      <p>forward + template + && </p> 
+                    <p>forward + template + && </p>
+                    <p>
+                        template <typename T>
+                            void foo(T&& arg) {
+                            bar(std::forward<T>(arg));
+                                }
+                    </p>
+                </li>
+                <li>
+                    foo将arg作为参数，调用bar，实现完美转发
                 </li>
             </ul>
         </li>

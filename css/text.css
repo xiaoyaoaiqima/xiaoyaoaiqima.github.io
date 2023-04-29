@@ -1,3 +1,7 @@
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
 a {
     --color: #58b5a1;
     color: var(--color);
@@ -19,7 +23,12 @@ h1 {
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
-p{
+
+.divide{
+    border: 1px solid #ccc;
+}
+
+p {
     font-size: 18px;
     letter-spacing: 1.5px;
 }
@@ -36,12 +45,18 @@ blockquote p {
     font-size: 1.2em;
     line-height: 1.5;
 }
-.t32{
+
+.t32 {
     font-size: 32px;
 }
-.t24{
+
+.t24 {
     font-size: 24px;
 }
-.t18{
+
+.t18 {
     font-size: 18px;
+}
+.tac{
+    text-align: center;
 }

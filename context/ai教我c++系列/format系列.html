@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>range系列</title>
+    <link rel="stylesheet" href="../../css/ai教我c++/style.css">
+    <link rel="stylesheet" href="../../css/text.css">
+</head>
+
+<body>
+    <button class="btn" onclick="location.href = './ai教我c++.html';"><span class="t18"> 返回</span></button>
+    <h2 class="tac"> format简介</h2>
+    <div class="divide"></div>
+    <ul>
+        <li>
+            <h3>解决浮点数精度丢失 </h3>
+  
+            <p>
+                double pi = 3.14159265358979;<br>
+                cout &lt;&lt; format("{}\n", pi);
+            </p>
+        </li>
+        <li>
+            <h3>取代sprintf</h3>
+            <p>
+                char buff[50];<br>
+                auto end = format_to_n(buff, sizeof(buff), "{}", pi);<br>
+                end是一个迭代器，指向缓冲区最后一个字符 <br>
+                用于把pi填入buff <br>
+                通过 string 访问缓冲区中的数据 <br>
+                string str(buff, end - buff);
+            </p>
+        </li>
+        <li>
+            <h3>与STL容器完美结合</h3>
+            <p>
+                vector &lt;char&gt; v; <br>
+                std::back_inserter可以将元素插入到末尾<br>
+                format_to(back_inserter(v), "{}", "1999");<br>
+                返回{"1","9","9","9"}
+            </p>
+        </li>
+        <li>
+            <h3>其他</h3>
+            <p>
+                计算format之后所需空间 <br>
+                auto size = formatted_size("{}", 42);<br>
+                给vector创造合适的空间<br>
+                vector &lt;char&gt; buf(size);<br>
+                data直接指向数据，避免其他开销<br>
+                format_to(buf.data(), "{}", 42);<br>
+            </p>
+        </li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
