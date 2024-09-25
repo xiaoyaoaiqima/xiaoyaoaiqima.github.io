@@ -14,8 +14,9 @@
 <meta property="og:description" content="核心概念：IoC容器容器是一种为某种特定组件的运行提供必要支持的一个软件环境，容器还提供了许多底层服务，对组件进行生命周期管理和配置组装服务。 Ioc，译文是控制反转。    控制权反转，将组件的创建+配置和组件的使用分离。 Spring的核心就是提供了一个IoC容器，它可以管理所有轻量级的JavaBean组件，提供的底层服务包括组件的生命周期管理、配置和组装服务、AOP支持，以及建立在AOP基础">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-26T14:33:41.000Z">
-<meta property="article:modified_time" content="2023-12-27T11:36:19.642Z">
+<meta property="article:modified_time" content="2024-09-25T23:43:37.515Z">
 <meta property="article:author" content="Sam Lin">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Samlin个人博客" type="application/atom+xml">
@@ -77,6 +78,10 @@
   <time class="dt-published" datetime="2023-12-26T14:33:41.000Z" itemprop="datePublished">2023-12-26</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -100,30 +105,27 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/26/spring2/" data-id="cm1iie8rs0006r8s0gg0269wo" data-title="spring入门" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/12/26/spring2/" data-id="cm1iili6j000acws07ohr4pse" data-title="spring入门" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2023/12/26/spring1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/02/23/%E4%BD%BF%E7%94%A8githubio-hexo%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          spring1
+          使用githubio_hexo制作个人博客
         
       </div>
     </a>
   
-  
-    <a href="/2023/12/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
   
 </nav>
 
@@ -139,7 +141,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B6%A6/">润</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tutorial/">tutorial</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B6%A6/">润</a></li></ul>
     </div>
   </div>
 
@@ -149,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B0%E8%A5%BF%E5%85%B0/" rel="tag">新西兰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BE%B3%E6%B4%B2/" rel="tag">澳洲</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B0%E8%A5%BF%E5%85%B0/" rel="tag">新西兰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BE%B3%E6%B4%B2/" rel="tag">澳洲</a></li></ul>
     </div>
   </div>
 
@@ -159,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%96%B0%E8%A5%BF%E5%85%B0/" style="font-size: 10px;">新西兰</a> <a href="/tags/%E6%BE%B3%E6%B4%B2/" style="font-size: 10px;">澳洲</a>
+      <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/%E6%96%B0%E8%A5%BF%E5%85%B0/" style="font-size: 10px;">新西兰</a> <a href="/tags/%E6%BE%B3%E6%B4%B2/" style="font-size: 10px;">澳洲</a>
     </div>
   </div>
 
@@ -189,15 +191,7 @@
           </li>
         
           <li>
-            <a href="/2023/12/26/spring1/">spring1</a>
-          </li>
-        
-          <li>
             <a href="/2023/12/26/spring2/">spring入门</a>
-          </li>
-        
-          <li>
-            <a href="/2023/12/25/hello-world/">Hello World</a>
           </li>
         
       </ul>
