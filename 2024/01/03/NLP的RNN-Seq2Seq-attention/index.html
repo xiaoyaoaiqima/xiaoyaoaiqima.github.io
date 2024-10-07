@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   
-  <title>pic2seq-caption | Samlin个人博客</title>
+  <title>NLP的RNN-Seq2Seq-attention | Samlin个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="NLP的RNN、Seq2Seq与attentive机制RNN用于NLP的优点1，对于文本的每一个词可以看做是一个时序，RNN是一个词一个词往下 Seq2Seq，RNN的变种1，源语言和目标语言的句子没有相同的长度 N vs M，这种结构又叫Encoder-Decoder结构。 2，可以把Encoder和Decoder分别看作是RNN，可以把encoder最后得出的c直接传入decoder，也可以把">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pic2seq-caption">
+<meta property="og:title" content="NLP的RNN-Seq2Seq-attention">
 <meta property="og:url" content="http://example.com/2024/01/03/NLP%E7%9A%84RNN-Seq2Seq-attention/index.html">
 <meta property="og:site_name" content="Samlin个人博客">
 <meta property="og:description" content="NLP的RNN、Seq2Seq与attentive机制RNN用于NLP的优点1，对于文本的每一个词可以看做是一个时序，RNN是一个词一个词往下 Seq2Seq，RNN的变种1，源语言和目标语言的句子没有相同的长度 N vs M，这种结构又叫Encoder-Decoder结构。 2，可以把Encoder和Decoder分别看作是RNN，可以把encoder最后得出的c直接传入decoder，也可以把">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ice.frostsky.com/2024/09/28/17de60680fe4e8769e76801bdc37210c.md.png">
 <meta property="article:published_time" content="2024-01-03T08:19:02.000Z">
-<meta property="article:modified_time" content="2024-09-28T10:45:27.660Z">
+<meta property="article:modified_time" content="2024-09-28T13:15:35.079Z">
 <meta property="article:author" content="Sam Lin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://ice.frostsky.com/2024/09/28/17de60680fe4e8769e76801bdc37210c.md.png">
@@ -91,7 +91,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      pic2seq-caption
+      NLP的RNN-Seq2Seq-attention
     </h1>
   
 
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/01/03/NLP%E7%9A%84RNN-Seq2Seq-attention/" data-id="cm1m6bigv0004uss0b8ew2zux" data-title="pic2seq-caption" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/01/03/NLP%E7%9A%84RNN-Seq2Seq-attention/" data-id="cm1ynlbve0005hos0g97pca7w" data-title="NLP的RNN-Seq2Seq-attention" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -176,7 +176,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
     </div>
   </div>
 
@@ -189,7 +189,11 @@
       <ul>
         
           <li>
-            <a href="/2024/09/28/note-academic-writing/">note_academic_writing</a>
+            <a href="/2024/10/06/%E5%8A%B3%E5%B7%A5%E5%B9%B3%E5%8F%B0/">劳工平台</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/28/note-academic-writing%20copy/">note_academic_writing</a>
           </li>
         
           <li>
@@ -202,10 +206,6 @@
         
           <li>
             <a href="/2024/08/26/GRE%E4%BD%9C%E6%96%87/">Gre作文</a>
-          </li>
-        
-          <li>
-            <a href="/2024/08/11/spoken-english-learning/">spoken_english_learning</a>
           </li>
         
       </ul>
